@@ -1,1 +1,1 @@
-FROM zulip/zulip-postgresql
+FROM zulip/zulip-postgresql:14
