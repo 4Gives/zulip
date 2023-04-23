@@ -1,5 +1,6 @@
 services:
 - type: pserv
+  region: singapore
   name: zulip-redis
   env: docker
   dockerfilePath: ./redis/Dockerfile
@@ -13,6 +14,7 @@ services:
     mountPath: /data
     sizeGB: 10
 - type: pserv
+  region: singapore
   name: zulip-memcached
   env: docker
   dockerfilePath: ./memcached/Dockerfile
@@ -25,6 +27,7 @@ services:
     - key: MEMCACHED_PASSWORD
       generateValue: true
 - type: pserv
+  region: singapore
   name: zulip-rabbitmq
   env: docker
   repo: https://github.com/render-examples/rabbitmq.git
@@ -41,6 +44,7 @@ services:
     mountPath: /var/lib/rabbitmq
     sizeGB: 10
 - type: pserv
+  region: singapore
   name: zulip-postgresql
   env: docker
   dockerfilePath: ./postgresql/Dockerfile
@@ -56,6 +60,7 @@ services:
     name: postgresql-persistent-storage
     mountPath: /var/lib/postgresql/data
 - type: web
+  region: singapore
   name: zulip
   env: docker
   plan: standard
