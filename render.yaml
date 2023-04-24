@@ -12,7 +12,7 @@ services:
   disk:
     name: redis-persistent-storage
     mountPath: /data
-    sizeGB: 10
+    sizeGB: 5
 - type: pserv
   region: singapore
   name: zulip-memcached
@@ -42,7 +42,7 @@ services:
   disk:
     name: rabbitmq
     mountPath: /var/lib/rabbitmq
-    sizeGB: 10
+    sizeGB: 5
 - type: pserv
   region: singapore
   name: zulip-postgresql
@@ -59,6 +59,7 @@ services:
   disk:
     name: postgresql-persistent-storage
     mountPath: /var/lib/postgresql/data
+    sizeGB: 5
 - type: web
   region: singapore
   name: zulip
@@ -69,6 +70,7 @@ services:
   disk:
     name: zulip-persistent-storage
     mountPath: /data
+    sizeGB: 5
   envVars:
     - key: SETTING_EXTERNAL_HOST
       sync: false # the hostname your users will use to connect to your Zulip server. this defaults to the onrender.com domain given to you by Render
