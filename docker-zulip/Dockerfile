@@ -5,7 +5,3 @@ ARG RENDER_EXTERNAL_HOSTNAME
 ENV SETTING_EXTERNAL_HOST=${SETTING_EXTERNAL_HOST:-$RENDER_EXTERNAL_HOSTNAME}
 RUN apt-get update && apt-get install -y nano python-dev
 RUN chown zulip:zulip /usr/bin/supervisorctl
-
-RUN /home/zulip/deployments/current/scripts/zulip-puppet-apply
-
-USER zulip
