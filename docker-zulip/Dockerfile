@@ -1,5 +1,5 @@
 FROM zulip/docker-zulip:latest
-COPY /zulip.conf /etc/zulip/zulip.conf
+COPY /zulip.conf ./etc/zulip/zulip.conf
 
 USER root
 
