@@ -1,7 +1,8 @@
 FROM zulip/docker-zulip:latest
-COPY /zulip.conf ./etc/zulip/zulip.conf
 
 USER root
+RUN mkdir -p /etc/zulip/
+COPY zulip.conf /etc/zulip/
 
 ARG RENDER_EXTERNAL_HOSTNAME
 ENV SETTING_EXTERNAL_HOST=${SETTING_EXTERNAL_HOST:-$RENDER_EXTERNAL_HOSTNAME}
