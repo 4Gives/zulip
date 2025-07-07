@@ -71,6 +71,7 @@ services:
   env: docker
   dockerfilePath: ./docker-zulip/Dockerfile
   autoDeploy: false
+  user: root
   disk:
     name: zulip-persistent-storage
     mountPath: /data
