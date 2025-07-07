@@ -159,7 +159,5 @@ services:
       value: 80 # Do not edit! Nginx listens for http traffic at port 80
     - key: SSL_CERTIFICATE_GENERATION # Render gives you SSL out of the box
       value: 'self-signed' # We set this to self-signed, since setup requires a value, but this is not used
-    - key: ZULIP_PROXY_ADDRESS_FORWARDING
-      value: 'true'
-    - key: ZULIP_PROXY_ADDRESS_FORWARDING
+    - key: LOADBALANCER_IPS
       value: '10.210.218.16'
